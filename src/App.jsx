@@ -20,7 +20,8 @@ const App = () => {
   const [loading, setLoading] = useState(false);
   const [location, setLocation] = useState({ state: "", district: "" });
   const [selectedLanguage, setSelectedLanguage] = useState("en");
-
+  const HF_API_URL = import.meta.env.VITE_HF_API_URL;
+  const HF_TOKEN = import.meta.env.VITE_HF_TOKEN;
   const handleLocationSelect = (state, district) => {
     setLocation({ state, district });
   };
@@ -39,10 +40,10 @@ const App = () => {
     formData.append("language", selectedLanguage);
 
     try {
-      const response = await fetch(`${VITE_HF_API_URL}/predict/`, {
+      const response = await fetch(`${HF_API_URL}/predict/`, {
       method: "POST",
       headers: {
-        "Authorization": `Bearer ${VITE_HF_TOKEN}`,  // loaded from .env
+        "Authorization": `Bearer ${HF_TOKEN}`,  // loaded from .env
       },
       body: formData,
     });
