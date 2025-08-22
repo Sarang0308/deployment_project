@@ -1,15 +1,15 @@
 import React from "react";
 
 const languages = [
-  { code: "en", name: "English" },
-  { code: "hi", name: "Hindi" },
-  { code: "ta", name: "Tamil" },
-  { code: "bn", name: "Bengali" },
-  { code: "mr", name: "Marathi" },
-  { code: "kn", name: "Kannada" },
-  { code: "gu", name: "Gujarati" },
-  { code: "ml", name: "Malayalam" },
-  { code: "te", name: "Telugu" },
+  { code: "english", name: "English" },
+  { code: "hindi", name: "Hindi" },
+  { code: "tamil", name: "Tamil" },
+  { code: "bengali", name: "Bengali" },
+  { code: "Marathi", name: "Marathi" },
+  { code: "Kannada", name: "Kannada" },
+  { code: "Gujarati", name: "Gujarati" },
+  { code: "Malayalam", name: "Malayalam" },
+  { code: "Telgu", name: "Telugu" },
 ];
 
 const LanguageDropdown = ({ selectedLanguage, onLanguageChange }) => {
