@@ -39,10 +39,10 @@ const App = () => {
     formData.append("language", selectedLanguage);
 
     try {
-      const response = await fetch(`${HF_API_URL}/predict/`, {
+      const response = await fetch(`${VITE_HF_API_URL}/predict/`, {
       method: "POST",
       headers: {
-        "Authorization": `Bearer ${HF_TOKEN}`,  // loaded from .env
+        "Authorization": `Bearer ${VITE_HF_TOKEN}`,  // loaded from .env
       },
       body: formData,
     });
